@@ -8,10 +8,13 @@ const Header = () => {
           <h1 style={{ textAlign: 'center'}}>Andrew's Gatsby miracle website</h1>
         </div>
         <div className="links" style={{ display: "flex", justifyContent: "space-around" }}>
-          <Link to='/'>Home</Link>
-          <Link to='/about'>About Me</Link>
-          <Link to='/contact'>Contact</Link>
-          <Link to='/blog'>Blog</Link>
+          <ul>
+            <li><Link to='/'>Home</Link></li>
+          
+          <li><Link to='/about'>About Me</Link></li>
+          <li><Link to='/contact'>Contact</Link></li>
+          <li><Link to='/blog'>Blog</Link></li>
+        </ul>
         </div>
       </header>
     </>

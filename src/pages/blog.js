@@ -8,33 +8,49 @@ import * as blogStyles from './blog.module.scss'
 
 const BlogPage = () => {
 
-  const data = useStaticQuery(graphql`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
-            frontmatter {
-              date
-              title
-            }
-            html
-            excerpt
-          }
-        }
+  // const data = useStaticQuery(graphql`
+  //   {
+  //     allMarkdownRemark {
+  //       edges {
+  //         node {
+  //           fields {
+  //             slug
+  //           }
+  //           frontmatter {
+  //             date
+  //             title
+  //           }
+  //           html
+  //           excerpt
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
+
+const data = useStaticQuery(graphql`
+query {
+  allContentfulBlogPost (sort: {
+    fields:publishedDate,
+    order:DESC
+  }) {
+    edges {
+      node {
+        title
+        slug
+        publishedDate(formatString:"MMMM Do, YYYY")
       }
     }
-  `);
+  }
+}`)
 
-  const postings = data.allMarkdownRemark.edges.map((edge) => {
+  const postings = data.allContentfulBlogPost.edges.map((edge) => {
       return (
         <li className={blogStyles.post}>
-          <Link to={`/blog/${edge.node.fields.slug}`}>
-            <h2>{edge.node.frontmatter.title}</h2>
+          <Link to={`/blog/${edge.node.slug}`}>
+            <h2>{edge.node.title}</h2>
           
-            <p>{edge.node.frontmatter.date}</p>
+            <p>{edge.node.publishedDate}</p>
             <div dangerouslySetInnerHTML={{__html: edge.node.html}} />
           </Link>
         </li>

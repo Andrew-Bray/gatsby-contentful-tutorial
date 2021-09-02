@@ -39,12 +39,17 @@ query {
         title
         slug
         publishedDate(formatString:"MMMM Do, YYYY")
+        body {
+          raw
+        }
       }
     }
   }
 }`)
 
   const postings = data.allContentfulBlogPost.edges.map((edge) => {
+    const body = JSON.parse(edge.node.body.raw)
+    console.log(body);
       return (
         <li className={blogStyles.post}>
           <Link to={`/blog/${edge.node.slug}`}>

@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 // NON_WORKING FEATURE, REPLACED BY renderRichText
 // import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { renderRichText } from 'gatsby-source-contentful/rich-text'
+import Head from '../components/head'
 
 
 export const query = graphql`
@@ -55,6 +56,7 @@ const Blog = ({ data }) => {
 
   return (
     <Layout>
+      <Head title={data.contentfulBlogPost.title}/>
       <h1>{data.contentfulBlogPost.title}</h1>
       <p>{data.contentfulBlogPost.publishedDate}</p>
       {/*Feature below renders 'options' */}

@@ -1,9 +1,12 @@
 import React from 'react'
  import Layout from '../components/layout'
 
+ import Head from '../components/head'
+
 const Contact = () => {
   return (
       <Layout>
+        <Head title="Contact"/>
         <h2>This is my Contact Page</h2>
         <p> You can connect with me at <a href="https://www.linkedin.com/in/andrew-michael-bray" target="_blank" rel="noopener noreferrer">Linked In</a>
         </p>

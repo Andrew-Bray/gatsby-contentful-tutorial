@@ -14,6 +14,7 @@ module.exports = {
     author: 'Andrew Bray'
     },
   plugins: [
+    'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-source-contentful',
       options: {

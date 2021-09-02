@@ -1,5 +1,6 @@
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import React from 'react'
+import Head from '../components/head'
 import Layout from '../components/layout'
 
 import * as blogStyles from './blog.module.scss'
@@ -65,6 +66,7 @@ query {
 
   return (
     <Layout>
+      <Head title="Blog"/>
       <h2>
         This is my Blog page
       </h2>

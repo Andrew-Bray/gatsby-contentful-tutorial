@@ -47,11 +47,11 @@ query {
   }
 }`)
 
-  const postings = data.allContentfulBlogPost.edges.map((edge) => {
-    const body = JSON.parse(edge.node.body.raw)
-    console.log(body);
+  const postings = data.allContentfulBlogPost.edges.map((edge, i) => {
+    // const body = JSON.parse(edge.node.body.raw)
+    // console.log(body);
       return (
-        <li className={blogStyles.post}>
+        <li key={i} className={blogStyles.post}>
           <Link to={`/blog/${edge.node.slug}`}>
             <h2>{edge.node.title}</h2>
           

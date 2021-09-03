@@ -20,3 +20,9 @@
   font-size: 0.7rem;
   text-align: center;
 }
+
+@media screen and (max-width: 660px) {
+  .wrapper {
+    margin-bottom: 7rem;
+  }
+}

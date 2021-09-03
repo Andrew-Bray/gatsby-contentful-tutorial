@@ -7,3 +7,9 @@
   margin-right: 10rem;
   font-size: 0.9rem;
 }
+
+@media screen and (max-width: 600px) {
+  .footer {
+    margin-top: 20rem;
+  }
+}

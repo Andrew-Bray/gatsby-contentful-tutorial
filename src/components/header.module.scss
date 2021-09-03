@@ -1,14 +1,24 @@
 .header {
-  padding: 1rem 0 3rem;
+  padding: 1rem 0 1.5rem 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
+
 .title {
-  color: black;
-  font-size: 3rem;
+  position: relative;
+  font-size: 2rem;
   text-decoration: none;
+  padding-bottom: 2rem;
+  text-align: left;
+  color: rgb(203, 225, 196);
 }
 
 .nav-item {
-  color: #777;
+  position: relative;
+  color: rgb(203, 199, 194);
   font-size: 0.9;
   margin-right: 1.4rem;
   text-decoration: none;
@@ -19,12 +29,19 @@
 }
 
 .active-nav-item {
-  color: #333;
-  font-weight: 600;
+  position: relative;
+  color: rgb(174, 155, 139);
+  font-weight: 700;
+  text-decoration: underline;
 }
 
 .nav-list {
+  position: relative;
   display: flex;
   list-style-type: none;
-  margin: 0;
+  margin: auto;
+  line-height: 3rem;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
 }

@@ -3,6 +3,8 @@ import React from 'react'
 import Head from '../components/head'
 import Layout from '../components/layout'
 
+import FadeIn from 'react-fade-in'
+
 import * as blogStyles from './blog.module.scss'
 
 
@@ -67,12 +69,14 @@ query {
   return (
     <Layout>
       <Head title="Blog"/>
+      <FadeIn>
       <h2>
-        This is my Blog page
+        Projects
       </h2>
       <ol className={blogStyles.posts}>
         {postings}
       </ol>
+      </FadeIn>
     </Layout>
   )
 }

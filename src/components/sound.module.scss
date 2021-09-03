@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  font-weight: 200;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.button-divs {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4rem;
+}
+
+.notes {
+  font-size: 0.7rem;
+  text-align: center;
+}

@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.2.0",
+    "@fontsource/lato": "^4.5.0",
     "gatsby": "^3.12.1",
     "gatsby-plugin-react-helmet": "^4.13.0",
     "gatsby-plugin-sass": "^4.13.0",
@@ -28,8 +29,10 @@
     "node-sass": "^6.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-fade-in": "^2.0.1",
     "react-helmet": "^6.1.0",
-    "sass": "^1.38.2"
+    "sass": "^1.38.2",
+    "use-sound": "^4.0.1"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",

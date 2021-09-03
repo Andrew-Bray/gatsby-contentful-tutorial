@@ -1,7 +1,7 @@
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
 
 html {
-  font-family: sans-serif;
+  font-family: "lato";
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -44,11 +44,13 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  color: rgb(236, 238, 222);
 }
 a:active,
 a:hover {
   outline-width: 0;
 }
+
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
@@ -621,4 +623,12 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+body {
+  background: linear-gradient(
+    173deg,
+    rgba(187, 214, 206, 1) 0%,
+    rgba(147, 180, 155, 1) 100%
+  );
 }

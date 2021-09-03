@@ -17,7 +17,7 @@ const Footer = () => {
 console.log(data);
   return (
     <footer className={footerStyles.footer}>
-      <p>Created by {data.site.siteMetadata.author} © 2021</p>
+      <p>Proudly created with Gatsby by {data.site.siteMetadata.author} © 2021</p>
     </footer>
   )
 }
